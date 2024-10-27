@@ -1,12 +1,16 @@
 export interface CoverConfig {
   title: string;
   author: string;
-  platform: string;
+  tags: string;
   font: string;
-  color: string;
   backgroundImage: string | null;
-  layout: 'centered' | 'left' | 'right';
-  textAlign: 'left' | 'center' | 'right';
-  overlay: 'none' | 'light' | 'dark' | 'gradient';
-  titleSize: 'small' | 'medium' | 'large';
+  logo: string | null;
+  backgroundColor: string;
+  textColor: string;
+  accentColor: string;
+  theme: 'default' | 'split' | 'minimal' | 'bold' | 'gradient' | 'text-only' | 'abstract' | 'pattern' | 'neon' | 'retro' | 'glassmorphism' | 'duotone';
+  openAIApiKey?: string;
+  textAlign?: 'left' | 'center' | 'right';
+  padding: number;
+  textShadow?: boolean;
 }

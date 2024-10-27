@@ -1,13 +1,15 @@
 import './globals.css';
+import './fonts.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
+import { GlobalFonts } from '@/components/GlobalFonts';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Blog Cover Generator',
-  description: 'Create beautiful blog covers in seconds',
+  title: 'DevCover - Blog Cover Generator',
+  description: 'Generate stunning blog covers for your tech articles',
 };
 
 export default function RootLayout({
@@ -24,6 +26,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <GlobalFonts />
           {children}
         </ThemeProvider>
       </body>
